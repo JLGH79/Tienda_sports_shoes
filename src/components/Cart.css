@@ -1,0 +1,158 @@
+
+.carrito-lateral {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background-color: #fffbea;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  padding: 2rem 1.5rem;
+  transition: right 0.4s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.carrito-lateral.activo {
+  right: 0;
+}
+
+.carrito-lateral h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #000;
+  border-bottom: 2px solid #ffce00;
+  padding-bottom: 10px;
+}
+
+.carrito-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carrito-lateral li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.carrito-lateral button {
+  background-color: #ffc107;
+  border: none;
+  padding: 5px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.carrito-lateral button:hover {
+  background-color: #e0a800;
+}
+
+#total-carrito {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: right;
+  color: #222;
+}
+
+.carrito-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.finalizar {
+  background: linear-gradient(90deg, #ffce00, #e6b800);
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.finalizar:hover {
+  box-shadow: 0 0 10px rgba(255, 206, 0, 0.6);
+}
+
+.vaciar {
+  background-color: #d62828;
+  color: white;
+}
+
+.vaciar:hover {
+  background-color: #a51919;
+}
+
+#toggle-carrito {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(145deg, #ffca28, #ffb300);
+  color: #000;
+  font-size: 28px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.6),
+              0 0 10px rgba(255, 193, 7, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#toggle-carrito:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.8),
+              0 0 12px rgba(255, 193, 7, 0.5);
+}
+
+#carrito-contador {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    gap: 0.8rem;
+  }
+
+  .footer .social-icons {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer .social-icons img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
+}
